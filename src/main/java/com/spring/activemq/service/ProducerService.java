@@ -23,7 +23,7 @@ public class ProducerService {
      * @param destination
      * @param message
      */
-    public void sendMessage(Destination destination, final String message) {
+    public void sendMessage(Destination destination, final String message)  {
         if (destination == null) {
             destination = jmsTemplate.getDefaultDestination();
         }
