@@ -18,9 +18,10 @@ public class QueueMessageListener implements MessageListener {
                 System.out.println("监听队列:" + queues.getPhysicalName() + "消费了消息:");
                 if (message instanceof TextMessage) {
                     TextMessage tm = (TextMessage) message;
-                    System.out.println("getJMSMessageID:"+tm.getJMSMessageID());
+                    System.out.println("getJMSMessageID:" + tm.getJMSMessageID());
                     try {
                         System.out.println("from get textMessage：\t" + tm.getText());
+                        System.out.println(tm.getJMSCorrelationID());
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
