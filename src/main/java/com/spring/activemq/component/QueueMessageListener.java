@@ -12,7 +12,7 @@ import javax.jms.*;
 public class QueueMessageListener implements MessageListener {
 
     /**
-     * 接返回
+     * 接返回123456
      * @param message
      */
     public void onMessage(Message message) {
