@@ -20,7 +20,7 @@
     <!--配置连接工厂-->
     <amq:connectionFactory id="amqConnectionFactory"
                            brokerURL="tcp://127.0.0.1:61616"
-                           userName="admin"
+                           userName="admin" useAsyncSend="true"
                            password="admin"/>
     <!--缓存功能连接工厂-->
     <bean id="connectionFactory"
