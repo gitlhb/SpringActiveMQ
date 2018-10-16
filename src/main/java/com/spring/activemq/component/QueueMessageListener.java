@@ -11,6 +11,10 @@ import javax.jms.*;
 @Component("queueMessageListener")
 public class QueueMessageListener implements MessageListener {
 
+    /**
+     * 接返回
+     * @param message
+     */
     public void onMessage(Message message) {
         try {
             ActiveMQDestination queues = (ActiveMQDestination) message.getJMSDestination();
