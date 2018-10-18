@@ -14,6 +14,7 @@ public class QueueMessageListener implements MessageListener {
 
     /**
      * 消息接收方
+     * 日期
      * @param message
      */
     public void onMessage(Message message) {
