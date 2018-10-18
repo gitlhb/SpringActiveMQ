@@ -18,7 +18,8 @@ public class QueueMessageListener implements MessageListener {
     public  static  final  Boolean isNew= Boolean.TRUE;
     public  static  final  Boolean isOld= Boolean.TRUE;
 
-     * 接返回123456
+    /**
+     * 消息接收方
      * @param message
      */
     public void onMessage(Message message) {
