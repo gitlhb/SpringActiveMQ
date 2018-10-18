@@ -14,7 +14,7 @@ public class QueueMessageListener implements MessageListener {
 
 
     public  static  final  Boolean isTest= Boolean.TRUE;
-
+    public  static  final  Boolean isDev= Boolean.TRUE;
 
     /**
      * 接返回123456
