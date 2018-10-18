@@ -1,5 +1,6 @@
 package com.spring.activemq.component;
 
+
 import org.apache.activemq.command.ActiveMQDestination;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +11,10 @@ import javax.jms.*;
  */
 @Component("queueMessageListener")
 public class QueueMessageListener implements MessageListener {
+
+
+    public  static  final  Boolean isTest= Boolean.TRUE;
+
 
     /**
      * 接返回123456
