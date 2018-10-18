@@ -12,12 +12,6 @@ import javax.jms.*;
 @Component("queueMessageListener")
 public class QueueMessageListener implements MessageListener {
 
-
-    public  static  final  Boolean isTest= Boolean.TRUE;
-    public  static  final  Boolean isDev= Boolean.TRUE;
-    public  static  final  Boolean isNew= Boolean.TRUE;
-    public  static  final  Boolean isOld= Boolean.TRUE;
-
     /**
      * 消息接收方
      * @param message
