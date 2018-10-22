@@ -20,6 +20,7 @@ public class Test {
         in.close();
         byte[] ret=out.toByteArray();
         out.close();
+        System.out.println(out.toString("utf-8"));
         System.out.println(new String(ret,"utf-8"));
     }
 }
