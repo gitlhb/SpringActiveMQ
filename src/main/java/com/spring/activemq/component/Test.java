@@ -30,5 +30,15 @@ public class Test {
         System.out.println(out.toString("utf-8"));
         System.out.println(out.toString("utf-8"));
         System.out.println(new String(ret,"utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(new String(ret,"utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(out.toString("utf-8"));
+        System.out.println(new String(ret,"utf-8"));
     }
 }
