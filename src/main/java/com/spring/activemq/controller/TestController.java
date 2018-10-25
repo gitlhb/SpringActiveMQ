@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
+
 
 /**
  * Created by liuhongbing on 2018/10/25.
@@ -17,7 +19,7 @@ public class TestController {
     @ResponseBody
     public  String test(@RequestBody String abc){
         System.out.println(abc);
-        return "liuhongbing";
+        return new Date().getTime()+"";
     }
 
 }
