@@ -18,6 +18,8 @@ public class QueueMessageListener implements MessageListener {
      * @param message
      */
     public void onMessage(Message message) {
+        TextMessage message1=(TextMessage) message;
+        System.out.println("msg:"+message1);
         try {
             ActiveMQDestination queues = (ActiveMQDestination) message.getJMSDestination();
             if (queues.getPhysicalName().equalsIgnoreCase("queue1")) {
