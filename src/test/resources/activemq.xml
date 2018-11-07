@@ -29,7 +29,7 @@
         <property name="sessionCacheSize" value="100"/>
     </bean>
 
-    <!-- 定义消息队列（Queue）目标 -->
+    <!-- 定义消息队列（Queue,Topic）目标 -->
     <bean id="demoQueueDestination" class="org.apache.activemq.command.ActiveMQTopic">
         <!-- 设置消息队列的名字 -->
         <!-- <constructor-arg>

@@ -48,6 +48,9 @@ public class Test1 {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andReturn();*/
+       /*
+       * 单元测试队列模式
+       * */
         /*ActiveMQDestination activeMQDestination = new ActiveMQQueue("myqueue");*/
        service.sendMessage(null,"system");
 
