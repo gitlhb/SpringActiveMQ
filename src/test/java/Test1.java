@@ -4,7 +4,6 @@ import com.spring.activemq.service.ConsumerService;
 import com.spring.activemq.service.ProducerService;
 import org.apache.activemq.command.ActiveMQDestination;
 import org.apache.activemq.command.ActiveMQQueue;
-import org.apache.activemq.command.ActiveMQTopic;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,7 +37,7 @@ public class Test1 {
 
     @Before
     public void setUp() throws Exception {
-       mvc = MockMvcBuilders.standaloneSetup(new TestController()).build();
+        mvc = MockMvcBuilders.standaloneSetup(new TestController()).build();
         mvc1 = MockMvcBuilders.standaloneSetup(new ProducerController()).build();
     }
 
@@ -48,21 +47,22 @@ public class Test1 {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andReturn();*/
-       /*
-       * 单元测试队列模式
-       * */
+        /*
+         * 单元测试队列模式
+         * */
         /*ActiveMQDestination activeMQDestination = new ActiveMQQueue("myqueue");*/
-       service.sendMessage(null,"system");
+        service.sendMessage(null, "system");
 
     }
+
     @Test
     public void testRec() throws Exception {
        /* mvc.perform(MockMvcRequestBuilders.post("/test").contentType(MediaType.APPLICATION_JSON).content("19001001").accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andReturn();*/
-        ActiveMQDestination activeMQDestination =  new ActiveMQQueue("myqueue");
-        String abc= consumer.receive(activeMQDestination);
+        ActiveMQDestination activeMQDestination = new ActiveMQQueue("myqueue");
+        String abc = consumer.receive(activeMQDestination);
 
     }
 
