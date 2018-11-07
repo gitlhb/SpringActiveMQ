@@ -16,14 +16,12 @@ import java.io.Serializable;
 public class ProducerService {
     @Resource
     private JmsTemplate jmsTemplate;
-
     /**
      * 发送文本信息
-     *
      * @param destination
      * @param message
      */
-    public void sendMessage(Destination destination, final String message)  {
+    public void sendMessage(Destination destination, final String message) {
         if (destination == null) {
             destination = jmsTemplate.getDefaultDestination();
         }
@@ -36,10 +34,8 @@ public class ProducerService {
         };
         jmsTemplate.send(destination, messageCreator);
     }
-
     /**
      * 发送map消息
-     *
      * @param destination
      * @param message
      */
@@ -56,10 +52,8 @@ public class ProducerService {
         });
         System.out.println("springJMS send map message...");
     }
-
     /**
      * 发送对象消息
-     *
      * @param destination 目标
      * @param object      要发送的对象
      */
@@ -74,10 +68,8 @@ public class ProducerService {
         });
         System.out.println("springJMS send object message...");
     }
-
     /**
      * 发送字节消息
-     *
      * @param destination
      * @param bytes
      */
@@ -95,10 +87,8 @@ public class ProducerService {
         });
         System.out.println("springJMS send bytes message...");
     }
-
     /**
      * 发送流消息
-     *
      * @param destination
      */
     public void sendStreamMessage(Destination destination) {
@@ -112,6 +102,4 @@ public class ProducerService {
         });
         System.out.println("springJMS send Strem message...");
     }
-
-
 }
