@@ -18,6 +18,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  * Created by liuhongbing on 2018/10/25.
@@ -43,6 +46,7 @@ public class Test1 {
 
     @Test
     public void test() throws Exception {
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
        /* mvc.perform(MockMvcRequestBuilders.post("/test").contentType(MediaType.APPLICATION_JSON).content("19001001").accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
@@ -51,7 +55,7 @@ public class Test1 {
          * 单元测试队列模式
          * */
         /*ActiveMQDestination activeMQDestination = new ActiveMQQueue("myqueue");*/
-        service.sendMessage(null, "system");
+        service.sendMessage(null, format.format(new Date()));
 
     }
 
