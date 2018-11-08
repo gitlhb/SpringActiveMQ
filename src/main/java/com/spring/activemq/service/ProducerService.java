@@ -27,7 +27,7 @@ public class ProducerService {
         if (destination == null) {
             destination = jmsTemplate.getDefaultDestination();
         }
-        System.out.println("Send Message :" + message + "to Destination :" + destination.toString());
+        System.out.println("Send Message :" + message + "   to Destination :" + destination.toString());
         MessageCreator messageCreator = new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {
                 return session.createTextMessage(message);
