@@ -43,7 +43,7 @@ public class ConsumerService implements MessageListener {
         try {
             System.out.println("-----------");
             TextMessage textMessage = (TextMessage) message;
-            System.out.println(textMessage.getText() + "msgId:" + textMessage.getJMSMessageID());
+            System.out.println(textMessage.getText() + "\r\nmsgId:" + textMessage.getJMSMessageID());
         } catch (Exception ex) {
 
         }
