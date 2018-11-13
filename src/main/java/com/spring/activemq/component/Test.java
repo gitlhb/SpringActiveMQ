@@ -18,9 +18,9 @@ public class Test {
             out.write(buffer,0,len);
         }
         in.close();
-        byte[] ret=out.toByteArray();
+        String ret=out.toString("utf-8");
         out.close();
-        System.out.println(out.toString("utf-8"));
+        System.out.println(ret);
 
     }
 }
